@@ -1,0 +1,5 @@
+/* home specific */
+.page.home{display:grid;grid-template-columns:1fr 320px;gap:16px}
+@media (max-width:1024px){.page.home{grid-template-columns:1fr}}
+.brain-card{align-items:center}
+.card.actions{display:flex;align-items:center;justify-content:center}

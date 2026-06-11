@@ -1,0 +1,69 @@
+@import './home.css';
+@import './study.css';
+@import './stats.css';
+
+:root{
+  --main: #7C83FD;
+  --accent: #96BAFF;
+  --bg: #F7F8FC;
+  --card: #FFFFFF;
+  --text: #303447;
+}
+
+*{box-sizing:border-box}
+body{font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Noto Sans KR', 'Helvetica Neue', Arial; background:var(--bg); color:var(--text); margin:0}
+.container{max-width:1000px;margin:20px auto;padding:0 16px}
+.navbar{background:linear-gradient(90deg,var(--main),var(--accent));color:white;padding:12px 0}
+.nav-inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 16px}
+.brand{margin:0;font-size:20px}
+nav a{color:rgba(255,255,255,0.9);margin-left:14px;text-decoration:none}
+nav a.active{font-weight:700}
+.card{background:var(--card);border-radius:12px;padding:18px;margin-bottom:16px;box-shadow:0 6px 18px rgba(20,20,50,0.04)}
+.page .card h2{margin-top:0}
+.btn{display:inline-block;background:var(--main);color:white;padding:10px 14px;border-radius:8px;text-decoration:none;border:none;cursor:pointer}
+.btn.ghost{background:transparent;border:1px solid #ddd;color:var(--text)}
+.actions-row{display:flex;gap:12px;justify-content:flex-end;margin-top:12px}
+
+/* responsive */
+@media (max-width:1024px){.container{padding:0 12px}}
+@media (max-width:768px){.nav-inner{padding:0 12px}.brand{font-size:18px}}
+@media (max-width:480px){.nav-inner{flex-direction:column;gap:8px}}
+
+/* small utilities */
+.empty{padding:14px;color:#667}
+.link{background:none;border:none;color:var(--main);cursor:pointer}
+
+/* Brain card */
+.brain-card{display:flex;align-items:center;gap:12px}
+.brain-emoji{font-size:48px}
+.brain-info .level{font-weight:700}
+.brain-info .exp{color:#666}
+
+/* Exp bar */
+.expbar .expbar-info{display:flex;justify-content:space-between;margin-bottom:8px}
+.expbar .bar{height:12px;background:#f1f3ff;border-radius:999px;overflow:hidden}
+.expbar .filled{height:100%;background:linear-gradient(90deg,var(--main),var(--accent));}
+
+/* form */
+.study-form{display:grid;gap:10px}
+.study-form label{display:block;font-size:14px}
+.study-form input{width:100%;padding:8px;border-radius:8px;border:1px solid #e6e9f2}
+
+/* list */
+.study-list{list-style:none;padding:0;margin:0}
+.study-list .record{padding:12px;border-bottom:1px solid #f1f3f8}
+.study-list .meta{display:flex;justify-content:space-between}
+.study-list .content{color:#444;margin:6px 0}
+.study-list .footer{display:flex;justify-content:space-between;align-items:center}
+
+/* stats grid */
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:768px){.stats-grid{grid-template-columns:1fr}}
+
+/* review list */
+.review-list ul{list-style:none;padding:0;margin:0}
+.review-list li{padding:8px 0;border-bottom:1px dashed #f1f3f8}
+
+/* small helpers */
+.motiv{margin-top:12px;color:#6b6f85}
+.today{margin-top:10px}
