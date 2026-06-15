@@ -24,6 +24,8 @@ import brainStage3 from './assets/brain-stages/brain-3-focus.png';
 import brainStage4 from './assets/brain-stages/brain-4-hero.png';
 import brainStage5 from './assets/brain-stages/brain-5-research.png';
 import brainStage6 from './assets/brain-stages/brain-6-success.png';
+import logo from './assets/gongbu_logo.png';
+
 
 const STORAGE_KEY = 'gongbuhaennoy-study-records-v1';
 const LEGACY_STORAGE_KEYS = ['braingrow-study-records-v2'];
@@ -204,9 +206,8 @@ function Header({ view, setView, today, currentTime }) {
 
   return (
     <header className="topbar">
-      <button className="brand" onClick={() => setView('home')} aria-label="Gongbuhaennoy? 홈">
-        <Brain size={24} />
-        <span>Gongbuhaennoy?</span>
+      <button className="brand" onClick={() => setView('home')}>
+        <img src={logo} alt="공부했뇌 로고" className="logo" />
       </button>
       <nav className="nav-tabs" aria-label="주요 메뉴">
         {tabs.map(({ id, label, icon: Icon }) => (

@@ -40,20 +40,20 @@ button:disabled {
   position: sticky;
   top: 0;
   z-index: 20;
+
   width: min(1560px, 100%);
-  min-height: 60px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 190px 1fr max-content;
+
+  display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 24px;
+
   padding: 10px 18px;
+
   border: 1px solid #dfe6f3;
   border-top: 0;
   border-radius: 0 0 10px 10px;
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 14px 32px rgba(42, 55, 92, 0.08);
-  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, .94);
 }
 
 .brand,
@@ -93,6 +93,7 @@ button:disabled {
   padding: 4px;
   border-radius: 10px;
   background: #f5f7fc;
+  margin-left: auto;
 }
 
 .nav-tabs button {
@@ -123,6 +124,7 @@ button:disabled {
   color: #687188;
   font-size: 13px;
   font-weight: 700;
+  margin-left: auto;
 }
 
 .page {
@@ -224,18 +226,24 @@ h2 {
 }
 
 @keyframes spriteFloat {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(var(--brain-art-lift)) rotate(-0.6deg);
   }
+
   50% {
     transform: translateY(calc(var(--brain-art-lift) - 9px)) rotate(0.8deg);
   }
 }
 
 @keyframes spritePulse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.025);
   }
@@ -266,11 +274,44 @@ h2 {
   background: #ffc9d2;
 }
 
-.lobe-a { width: 52px; height: 42px; left: 5px; top: -18px; transform: rotate(-10deg); }
-.lobe-b { width: 58px; height: 48px; left: 41px; top: -28px; }
-.lobe-c { width: 52px; height: 42px; right: 8px; top: -17px; transform: rotate(12deg); }
-.lobe-d { width: 46px; height: 38px; left: -11px; top: 33px; transform: rotate(-68deg); }
-.lobe-e { width: 46px; height: 38px; right: -11px; top: 35px; transform: rotate(68deg); }
+.lobe-a {
+  width: 52px;
+  height: 42px;
+  left: 5px;
+  top: -18px;
+  transform: rotate(-10deg);
+}
+
+.lobe-b {
+  width: 58px;
+  height: 48px;
+  left: 41px;
+  top: -28px;
+}
+
+.lobe-c {
+  width: 52px;
+  height: 42px;
+  right: 8px;
+  top: -17px;
+  transform: rotate(12deg);
+}
+
+.lobe-d {
+  width: 46px;
+  height: 38px;
+  left: -11px;
+  top: 33px;
+  transform: rotate(-68deg);
+}
+
+.lobe-e {
+  width: 46px;
+  height: 38px;
+  right: -11px;
+  top: 35px;
+  transform: rotate(68deg);
+}
 
 .eye {
   position: absolute;
@@ -297,8 +338,13 @@ h2 {
   animation: eyeBlink 4.8s ease-in-out infinite;
 }
 
-.eye-left { left: 49px; }
-.eye-right { right: 49px; }
+.eye-left {
+  left: 49px;
+}
+
+.eye-right {
+  right: 49px;
+}
 
 .smile {
   position: absolute;
@@ -322,8 +368,13 @@ h2 {
   background: rgba(255, 111, 128, 0.3);
 }
 
-.cheek-left { left: 30px; }
-.cheek-right { right: 30px; }
+.cheek-left {
+  left: 30px;
+}
+
+.cheek-right {
+  right: 30px;
+}
 
 .arm,
 .leg {
@@ -339,8 +390,15 @@ h2 {
   border-radius: 999px;
 }
 
-.arm-left { left: -7px; transform: rotate(28deg); }
-.arm-right { right: -7px; transform: rotate(-28deg); }
+.arm-left {
+  left: -7px;
+  transform: rotate(28deg);
+}
+
+.arm-right {
+  right: -7px;
+  transform: rotate(-28deg);
+}
 
 .leg {
   width: 5px;
@@ -349,8 +407,13 @@ h2 {
   border-radius: 999px;
 }
 
-.leg-left { left: 57px; }
-.leg-right { right: 57px; }
+.leg-left {
+  left: 57px;
+}
+
+.leg-right {
+  right: 57px;
+}
 
 .accent,
 .question,
@@ -380,8 +443,17 @@ h2 {
   animation: popShine 1.5s ease-in-out infinite;
 }
 
-.accent-a { left: 23%; top: 52px; transform: rotate(23deg); }
-.accent-b { right: 20%; top: 42px; transform: rotate(22deg); }
+.accent-a {
+  left: 23%;
+  top: 52px;
+  transform: rotate(23deg);
+}
+
+.accent-b {
+  right: 20%;
+  top: 42px;
+  transform: rotate(22deg);
+}
 
 .question {
   z-index: 1;
@@ -483,8 +555,14 @@ h2 {
   background: rgba(255, 255, 255, 0.18);
 }
 
-.glasses-left { left: 35px; }
-.glasses-right { right: 35px; }
+.glasses-left {
+  left: 35px;
+}
+
+.glasses-right {
+  right: 35px;
+}
+
 .bridge {
   z-index: 8;
   top: 55px;
@@ -492,6 +570,12 @@ h2 {
   width: 18px;
   height: 4px;
   background: #2f374b;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
 }
 
 .lightbulb {
@@ -562,8 +646,13 @@ h2 {
   border-radius: 50%;
 }
 
-.trophy::before { left: -19px; }
-.trophy::after { right: -19px; }
+.trophy::before {
+  left: -19px;
+}
+
+.trophy::after {
+  right: -19px;
+}
 
 .cap {
   z-index: 10;
@@ -705,82 +794,110 @@ h2 {
 }
 
 @keyframes brainFloat {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) scale(var(--buddy-scale, 1));
   }
+
   50% {
     transform: translateY(-7px) scale(var(--buddy-scale, 1));
   }
 }
 
 @keyframes eyeBlink {
-  0%, 92%, 100% {
+
+  0%,
+  92%,
+  100% {
     transform: scaleY(1);
   }
+
   95% {
     transform: scaleY(0.12);
   }
 }
 
 @keyframes questionFloat {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) rotate(0deg);
   }
+
   50% {
     transform: translateY(-8px) rotate(7deg);
   }
 }
 
 @keyframes popShine {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1) rotate(23deg);
   }
+
   50% {
     transform: scale(1.18) rotate(30deg);
   }
 }
 
 @keyframes bookWiggle {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: rotate(-1deg);
   }
+
   50% {
     transform: rotate(2deg);
   }
 }
 
 @keyframes capeWave {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: skewY(-14deg) translateX(0);
   }
+
   50% {
     transform: skewY(-9deg) translateX(-6px);
   }
 }
 
 @keyframes arrowRise {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) rotate(-47deg);
   }
+
   50% {
     transform: translateY(-8px) rotate(-47deg);
   }
 }
 
 @keyframes magnifierSearch {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(0, 0) rotate(-4deg);
   }
+
   50% {
     transform: translate(5px, -4px) rotate(5deg);
   }
 }
 
 @keyframes bulbGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     filter: drop-shadow(0 0 0 rgba(255, 201, 75, 0));
     transform: scale(1);
   }
+
   50% {
     filter: drop-shadow(0 0 10px rgba(255, 201, 75, 0.75));
     transform: scale(1.08);
@@ -788,27 +905,36 @@ h2 {
 }
 
 @keyframes trophyBounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) rotate(-4deg);
   }
+
   50% {
     transform: translateY(-7px) rotate(3deg);
   }
 }
 
 @keyframes capTilt {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: rotate(8deg);
   }
+
   50% {
     transform: rotate(14deg) translateY(-2px);
   }
 }
 
 @keyframes confettiFall {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0) rotate(-30deg);
   }
+
   50% {
     transform: translateY(8px) rotate(18deg);
   }
@@ -955,7 +1081,7 @@ h2 {
   min-width: 0;
 }
 
-.today-copy > span,
+.today-copy>span,
 .today-copy small {
   display: block;
   color: #687188;
@@ -1183,7 +1309,7 @@ h2 {
   margin: 0;
 }
 
-.section-head > span {
+.section-head>span {
   color: #7b849a;
   font-size: 14px;
   font-weight: 700;
@@ -1802,8 +1928,17 @@ td:nth-child(3) {
     grid-template-columns: 1fr;
   }
 
-  .brand,
-  .nav-tabs,
+  .brand {
+    justify-self: start;
+    gap: 8px;
+    border: 0;
+    background: transparent;
+  }
+
+  .nav-tabs {
+    justify-self: center;
+  }
+
   .today-chip {
     justify-self: center;
   }
@@ -1958,4 +2093,3 @@ td:nth-child(3) {
     margin: 0 auto;
   }
 }
-
